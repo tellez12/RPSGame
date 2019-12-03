@@ -76,12 +76,14 @@ class Game:
             print(f"Round {round}: Player 1:{self.p1.score} vs Player 2: {self.p2.score}")
             last_m1 = m1
             last_m2 = m2
+
+
 players = []
 players.append(Player(name="Random 3 Moves",strategy=RandomStrategy(2)))
 players.append(Player(name="Random 5 Moves",strategy=RandomStrategy(4)))
 players.append(Player(name="Be Water",strategy=BaseStrategy()))
 
-for p1, in players:
+for p1 in players:
     for p2 in players:
         if p1 == p2:
             continue
